@@ -1,0 +1,55 @@
+.nav{
+  height: 74px;
+  padding: 0 26px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color: rgba(255,255,255,0.86);
+}
+.left{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+}
+.logoMark{
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, rgba(200,160,255,0.95), rgba(120,70,255,0.7));
+  box-shadow: 0 0 12px rgba(150,80,255,0.45);
+}
+.logoText{
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  font-size: 18px;
+}
+.sep{
+  width: 1px;
+  height: 18px;
+  background: rgba(255,255,255,0.10);
+  margin: 0 4px;
+}
+.pageTitle{
+  font-size: 14px;
+  color: rgba(255,255,255,0.72);
+}
+.status{
+  margin-left: 10px;
+}
+.right{
+  display:flex;
+  align-items:center;
+}
+.planet{
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.55), rgba(255,255,255,0.0) 36%),
+    radial-gradient(circle at 30% 70%, rgba(255,255,255,0.15), rgba(255,255,255,0.0) 48%),
+    radial-gradient(circle at 65% 60%, rgba(220,160,255,0.85), rgba(120,60,200,0.45) 55%, rgba(30,10,50,0.0) 76%),
+    linear-gradient(180deg, rgba(180,122,255,0.25), rgba(60,30,120,0.15));
+  box-shadow:
+    0 0 24px rgba(140, 80, 255, 0.22),
+    0 0 0 1px rgba(255,255,255,0.06) inset;
+}
