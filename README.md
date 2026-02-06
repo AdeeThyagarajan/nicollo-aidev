@@ -29,7 +29,7 @@ Rather than open-ended chat, Nicollo guides users through constraint-driven work
 
 ## Why I built it
 
-I repeatedly saw good ideas fail because they were unclear, underspecified, or too abstract to act on. Nicollo is an attempt to bring structure, discipline, and calm reasoning into early product design, using AI as a support system rather than a shortcut.
+Nicollo is an attempt to bring structure, discipline, and calm reasoning into early product design, using AI as a support system rather than a shortcut.
 
 ## Status
 
