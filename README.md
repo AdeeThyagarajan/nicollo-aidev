@@ -18,14 +18,32 @@ Rather than open-ended chat, Nicollo guides users through constraint-driven work
 - Multi-step prompt orchestration instead of free-form chat  
 - Constraint-driven reasoning to enforce clarity and sequencing  
 - Structured outputs (plans, steps, risks) rather than narrative text  
-- Designed to fail clearly rather than hallucinate confidently  
+- Designed to fail clearly rather than hallucinate confidently
+
+## Architecture Overview
+
+- Client (Next.js) → API routes (Node/Server functions)  
+- Orchestration layer manages staged LLM calls  
+- Project state persists across sessions for continuity  
+- Structured outputs are stored and used to build final deliverables 
 
 ## System design
 
 - Server-side execution with project-level state  
 - Stepwise orchestration across planning stages  
 - Persistent project context across interactions  
-- UI supports workspace-style interaction rather than chat threads  
+- UI supports workspace-style interaction rather than chat threads
+
+## Prompt Orchestration
+
+Nicollo uses multi-step, constraint-driven prompt sequences rather than isolated LLM calls.  
+Each stage enforces structure and sequencing logic so that outputs are deterministic and repeatable wherever possible.
+
+## Evaluation & Quality Control
+
+- Outputs are tested via fixed input sequences to check stability and drift.
+- Logical completeness, step dependency, and risk extraction are validated manually.
+- Structured output format reduces ambiguity and prevents confident hallucinations.
 
 ## Why I built it
 
