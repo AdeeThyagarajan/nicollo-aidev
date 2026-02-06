@@ -1,75 +1,69 @@
-# Nicollo V1 (UI-locked prototype)
-
-This repo is a **pixel-locked** UI prototype of the Devassist V1 workspace layout (desktop-only).
-
 # Nicollo
 
-AI assisted product design system
+AI-assisted product design and planning system
 
-Nicollo helps turn vague ideas into structured, delivery ready product plans. It is built for people who have ideas but struggle to turn them into something engineers and designers can actually execute.
+Nicollo helps turn vague product ideas into structured, delivery-ready plans. It is designed for early-stage thinking, where ambiguity, missing constraints, and poor sequencing often derail execution before build even begins.
 
-Instead of open ended chat, Nicollo guides users through constraint driven workflows that force clarity, sequencing, and tradeoff awareness early.
-
-The goal is not to replace product thinking, but to support it.
+Rather than open-ended chat, Nicollo guides users through constraint-driven workflows that force clarity, surface trade-offs, and structure reasoning early. The goal is not to replace product judgement, but to support clearer decisions.
 
 ## What it does
 
-Helps users break down ideas into clear problem statements  
-Surfaces assumptions, risks, and gaps early  
-Produces structured outputs that are usable by real product teams  
-Reduces ambiguity before build time, not after  
+- Breaks down vague ideas into clear problem statements  
+- Surfaces assumptions, risks, and gaps early  
+- Produces structured outputs usable by real product teams  
+- Reduces ambiguity before build time, not after  
 
-## How it thinks
+## How it works
 
-Constraint driven rather than free form  
-Sequenced reasoning instead of prompt sprawl  
-Focused on decision quality, not verbosity  
-Designed to fail clearly rather than hallucinate confidently  
+- Multi-step prompt orchestration instead of free-form chat  
+- Constraint-driven reasoning to enforce clarity and sequencing  
+- Structured outputs (plans, steps, risks) rather than narrative text  
+- Designed to fail clearly rather than hallucinate confidently  
+
+## System design
+
+- Server-side execution with project-level state  
+- Stepwise orchestration across planning stages  
+- Persistent project context across interactions  
+- UI supports workspace-style interaction rather than chat threads  
 
 ## Why I built it
 
-I kept seeing good ideas fail because they were unclear, underspecified, or too abstract to act on. Nicollo is an attempt to bring structure, discipline, and calm thinking into early product design using AI as a support tool.
+I repeatedly saw good ideas fail because they were unclear, underspecified, or too abstract to act on. Nicollo is an attempt to bring structure, discipline, and calm reasoning into early product design, using AI as a support system rather than a shortcut.
 
 ## Status
 
-Actively evolving through real world use and iteration.
+Actively evolving through real-world use and iteration.
 
-More details and demos  
+Demo workspace  
 https://nicollo-aidev.vercel.app/projects
 
-
-## Run
+## Run locally
 
 ```bash
 npm install
 npm run dev
-```
 
 Open: http://localhost:3000
 
-## Routes
+##Routes
+/projects — project list
+/projects/[id]/workspace — planning workspace
+/login and /signup — minimal auth UI
 
-- `/projects/1/workspace` — workspace (matches the locked mock)
-- `/projects` — project list (minimal)
-- `/login` and `/signup` — minimal auth UIs (no auth logic yet)
+##Workspace interactions
+Chat-driven planning flow
+Constraint-aware status tracking
+Structured data export (CSV)
+File tree and tab-based workspace navigation
 
-## Notes
+##Notes
+Desktop-first UI by design
+CSS Modules and global styles (no Tailwind)
+Focus is on system behaviour and workflow, not responsive polish
 
-- No Tailwind for layout/visuals (CSS Modules + globals only).
-- UI is intentionally non-responsive and desktop-locked.
+##OpenAI
 
+Create .env.local with:
 
-## Workspace interactions
-- Chat send (Enter/click)
-- Status dropdown filters table
-- Export Data downloads CSV
-- Pending Actions + increments count
-- File tree highlights selection and tabs switch
-
-
-## OpenAI
-Create `.env.local` with only:
-```
 OPENAI_API_KEY=your_key
-```
-(Optional) `OPENAI_MODEL`.
